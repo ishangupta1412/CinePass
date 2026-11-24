@@ -18,17 +18,11 @@
 
 <br/>
 
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=html,css,js,vscode&theme=dark" alt="CinePass Tech Stack" />
-</a>
-
-<br/><br/>
-
 [**Overview**](#overview) &nbsp;•&nbsp; 
 [**Engineering Pillars**](#engineering-pillars) &nbsp;•&nbsp; 
 [**System Architecture**](#system-architecture--data-flow) &nbsp;•&nbsp; 
 [**Test Suite**](#functional-verification-suite) &nbsp;•&nbsp; 
-[**Project Structure**](#project-structure) &nbsp;•&nbsp; 
+[**Tech Stack**](#technologies--tech-stack) &nbsp;•&nbsp; 
 [**Quickstart**](#quickstart--local-setup) &nbsp;•&nbsp; 
 [**Engineering Team**](#engineering-team)
 
@@ -171,6 +165,32 @@ CinePass/
     ├── logo.png          # CinePass brand insignia
     ├── favicon.png       # CinePass site icon
     └── posters/          # High-resolution film poster assets
+```
+
+---
+
+## Technologies & Tech Stack
+
+<p align="center">
+  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/29fd6286-4e7b-4d6c-818f-c4765d5e39a9" width="65" alt="HTML5" />
+  &nbsp;&nbsp;
+  <img src="https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/67f477ed-6624-42da-99f0-1a7b1a16eecb" width="65" alt="CSS3" />
+  &nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="65" alt="JavaScript" />
+  &nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/74038190/212281775-b468df30-4edc-4bf8-a4ee-f52e1aaddc86.gif" width="65" alt="Git" />
+  &nbsp;&nbsp;
+  <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="65" alt="VS Code" />
+</p>
+
+```
+Markup Layer          Semantic HTML5 (<header>, <nav>, <main>, <section>, <article>, <footer>)
+Design & Layout       CSS3 Custom Properties (:root), CSS Grid, Flexbox, @media print & responsive rules
+Core Logic            Vanilla ES6+ JavaScript (DOM API, Array HOFs, URLSearchParams, Regex Guards)
+State Persistence     Web Storage API (localStorage) — cinepass_pending, cinepass_bookings, cinepass_seats
+Seat Engine           Deterministic Polynomial Hashing (22% Pre-seeded Occupancy, 6x10 Tiered Grid)
+Verification          Manual End-to-End Test Suite (8/8 Test Cases Passing)
+Environment           Visual Studio Code + Live Server, Git Version Control
 ```
 
 ---
