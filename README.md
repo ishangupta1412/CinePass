@@ -1,131 +1,166 @@
 <div align="center">
 
-  <img src="images/logo.png" alt="CinePass Logo" width="220" />
-  <br/>
-  <img src="images/favicon.png" alt="CinePass Favicon" width="36" height="36" />
+<img src="images/logo.png" alt="CinePass Logo" width="180" />
 
-  # CinePass
+# CinePass
 
-  **A modern, responsive cinema discovery and movie ticket booking web application.**  
-  *Engineered with semantic HTML5, CSS3 Grid & Flexbox layouts, and vanilla ES6+ JavaScript.*
+### A Modern Cinema Discovery & Interactive Ticket Reservation Web Portal
+*Pure client-side cinema booking application engineered with semantic HTML5, modern CSS3 layout systems (Grid & Flexbox), and modular vanilla JavaScript (ES6+). Features instant catalogue filtering, interactive 60-seat auditorium visualizer with tiered pricing, regex-validated checkout, and printable boarding passes.*
 
-  <br/>
+<br/>
 
-  <!-- Tech Stack Animated Badges / GIFs -->
-  <p align="center">
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" width="44" height="44"/>
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" width="44" height="44"/>
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="44" height="44"/>
-    </a>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://code.visualstudio.com/">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="VS Code" width="44" height="44"/>
-    </a>
-  </p>
+[![HTML5](https://img.shields.io/badge/HTML5-Semantic%20Markup-E34F26.svg?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-Grid%20%7C%20Flexbox-1572B6.svg?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+%20Vanilla-F7DF1E.svg?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Web Storage API](https://img.shields.io/badge/Storage-Web%20Storage%20API%20(localStorage)-10b981.svg?style=flat-square&logo=googlechrome&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+[![IDE](https://img.shields.io/badge/IDE-VS%20Code-007ACC.svg?style=flat-square&logo=visualstudiocode&logoColor=white)](https://code.visualstudio.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
 
-  <p align="center">
-    <img src="https://skillicons.dev/icons?i=html,css,js,vscode&theme=dark" alt="CinePass Tech Stack" />
-  </p>
+<br/>
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/Architecture-100%25%20Vanilla%20Web-1B365D?style=for-the-badge&logo=w3c&logoColor=white" alt="Vanilla Web"/>
-    <img src="https://img.shields.io/badge/Storage-Web%20Storage%20API%20(localStorage)-2A6496?style=for-the-badge&logo=html5&logoColor=white" alt="LocalStorage"/>
-    <img src="https://img.shields.io/badge/Design-Responsive%20CSS%20Grid%20%26%20Flexbox-15803D?style=for-the-badge&logo=css3&logoColor=white" alt="Responsive"/>
-    <img src="https://img.shields.io/badge/License-MIT-B45309?style=for-the-badge" alt="License"/>
-  </p>
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=html,css,js,vscode&theme=dark" alt="CinePass Tech Stack" />
+</a>
+
+<br/><br/>
+
+[**Overview**](#overview) &nbsp;•&nbsp; 
+[**Engineering Pillars**](#engineering-pillars) &nbsp;•&nbsp; 
+[**System Architecture**](#system-architecture--data-flow) &nbsp;•&nbsp; 
+[**Test Suite**](#functional-verification-suite) &nbsp;•&nbsp; 
+[**Project Structure**](#project-structure) &nbsp;•&nbsp; 
+[**Quickstart**](#quickstart--local-setup) &nbsp;•&nbsp; 
+[**Engineering Team**](#engineering-team)
 
 </div>
 
 ---
 
-## 📽 Overview
+## Overview
 
-**CinePass** is a high-performance cinema ticketing web portal designed to provide a fast, distraction-free movie discovery and booking workflow. Unlike bloated commercial platforms cluttered with ad banners and aggressive upselling, CinePass focuses on core web standards:
+Commercial movie ticketing platforms suffer from severe design bloat: heavy third-party tracking scripts, intrusive advertisement banners, aggressive snack upselling dialogues, and multi-megabyte bundle sizes that stutter on mobile networks. 
 
-- **Zero Framework Overhead**: Built purely on native browser APIs with zero external dependencies (no React, Bootstrap, or jQuery).
-- **Persistent State Without a Backend**: Utilizes the browser's native `localStorage` to manage pending reservations, occupied seats, and confirmed ticket history across sessions.
-- **Dynamic 60-Seat Auditorium**: Interactive seat visualizer featuring tiered pricing (Silver, Gold, Platinum), seat selection safety caps (max 8 seats), and real-time total recalculation.
-- **Boarding-Pass Digital Ticket**: Generates verified 8-character PNR codes (`CPXXXXXX`) with `@media print` stylesheets optimized for physical paper ticket printing.
-
----
-
-## 🚀 Key Features
-
-### 1. Dynamic Catalogue & Real-Time Search
-- **Instant Client-Side Filtering**: Filters 150+ film records dynamically on `input` events without page reloads.
-- **Multi-Category Browsing**: Dedicated listings for Bollywood, Hollywood, Regional Indian cinema, and Anime titles (`movies.html` & `anime.html`).
-- **Defensive Poster Fallback**: Integrated SVG fallback generation preventing broken UI layouts on slow network connections.
-
-### 2. Interactive Seat Reservation (`booking.html`)
-- **60-Seat Interactive Grid**: Visualizes auditorium rows (A through F) with 10 seats per row.
-- **Tier-Based Pricing**:
-  - `Silver Tier` (Rows A–B): ₹200
-  - `Gold Tier` (Rows C–D): ₹280
-  - `Platinum Tier` (Rows E–F): ₹350
-- **Deterministic Seeded Occupancy**: Employs a mathematical hash algorithm (`getSeededSeats()`) to generate realistic ~22% occupancy per showtime without a backend database.
-
-### 3. Regex-Validated Checkout (`checkout.html`)
-- **Strict Regular Expression Verification**:
-  - **Mobile Number**: `^[0-9]{10}$` (exact 10 numeric digits)
-  - **Email Address**: `^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$`
-  - **Payment Validation**: Card (16-digit + MM/YY expiry), UPI ID, and Netbanking support.
-
-### 4. Digital Boarding Pass & Management Hub (`ticket.html` & `my-bookings.html`)
-- **Printable Boarding Pass**: Boarding-pass format ticket rendering film metadata, screen timing, seat allocations, and barcode visuals.
-- **Booking Hub & Cancellation**: Users can inspect active reservations and cancel tickets, instantly releasing reserved seats back into the available pool.
+**CinePass** addresses this challenge by delivering a distraction-free, high-performance cinema booking experience built exclusively with foundational client-side web technologies:
+1. **Zero External Frameworks**: No React, Bootstrap, Tailwind, or jQuery. Native DOM manipulation and vanilla CSS guarantee immediate page execution.
+2. **Persistent State Without a Backend**: Employs the browser's native **Web Storage API (`localStorage`)** to manage transient checkout states, seat occupancy maps, and permanent confirmed ticket ledgers across browser sessions.
+3. **Interactive 60-Seat Auditorium Grid**: Dynamic SVG/CSS seat visualizer supporting tiered seating categories (Silver, Gold, Platinum) with real-time price recalculation and strict safety limits (max 8 seats per booking).
+4. **Deterministic Seeded Occupancy**: Generates realistic, reproducible seat occupancy (~22% occupied per showtime) using a client-side polynomial string hashing algorithm without a dedicated database server.
+5. **Print-Optimized Boarding Pass**: Boarding-pass format ticket rendering verified 8-character PNR codes (`CPXXXXXX`) with `@media print` rules for physical printing.
 
 ---
 
-## 🏗 Application Architecture & Data Flow
+## Engineering Pillars
+
+### 1. Dynamic Catalogue & Real-Time Dual-State Search
+- **Instant Search Filter**: Attaches `input` event listeners across the 150+ film dataset in `data.js`. Filters titles dynamically using `Array.prototype.filter()` and substring matching without page reloads.
+- **Dual-State Category Logic**: Evaluates genre chips (`All`, `Action`, `Drama`, `Sci-Fi`) and language filters (`Hindi`, `English`, `Telugu`, `Tamil`, `Japanese`) concurrently:
+  $$\text{Visible}(m) = \Big(\text{query} \subseteq m.\text{title}\Big) \;\land\; \Big(m.\text{genre} \cap \text{activeGenre} \neq \emptyset\Big) \;\land\; \Big(m.\text{lang} = \text{activeLang}\Big)$$
+- **Defensive Image Fallback**: Integrated SVG poster generators ensure that network timeouts or missing remote assets never break the catalogue grid.
+
+### 2. 60-Seat Interactive Auditorium Visualizer
+- **Two-Dimensional Grid Architecture**: The auditorium is structured into 6 rows ($A$ to $F$) with 10 seats per row (60 total seats):
+  - **Silver Tier** (Rows A–B): Base admission ₹200
+  - **Gold Tier** (Rows C–D): Mid-tier admission ₹280
+  - **Platinum Tier** (Rows E–F): Premium lounger admission ₹350
+- **Seat Safety Envelopes**: Prevents race conditions and bulk hoarding by enforcing $1 \le \text{seats} \le 8$. Exceeding the 8-seat limit blocks selection and triggers immediate feedback.
+- **Real-Time Price Recalculation**: Computes order total via `Array.prototype.reduce()` on active seat state:
+  $$\text{Subtotal} = \sum_{s \,\in\, \text{Selected}} \text{TierPrice}(s.\text{tier})$$
+
+### 3. Deterministic Seeded Seat Hashing Engine
+To provide a realistic cinema atmosphere where various seats are already occupied without connecting to a remote SQL database, CinePass implements a polynomial string hash algorithm:
+```javascript
+function hashString(text) {
+  let hash = 0;
+  for (let i = 0; i < text.length; i++) {
+    hash = (hash * 31 + text.charCodeAt(i)) % 1000003;
+  }
+  return hash;
+}
+```
+For any given show key ($\text{MovieID} \mathbin{::} \text{Date} \mathbin{::} \text{Theatre} \mathbin{::} \text{Time}$), each seat ID is hashed:
+$$\text{IsOccupied}(\text{seatId}) = \Big(\text{hashString}(\text{ShowKey} \mathbin{::} \text{seatId}) \pmod{100} < 22\Big)$$
+This ensures realistic, persistent occupancy distributions for every unique cinema showtime.
+
+### 4. Regular Expression Form Validation
+Client-side form submissions are protected with strict regex patterns before any booking can be committed to storage:
+- **Mobile Number Validation**: `/^[0-9]{10}$/` (exact 10 numeric digits, preventing characters, prefixes, or spaces).
+- **Email Address Validation**: `/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/` (RFC 5322 compliant syntax).
+- **Card Expiry Date**: `/^(0[1-9]|1[0-2])\/[0-9]{2}$/` (enforces valid month 01–12 and 2-digit year).
+- **Card Number**: Validates 16 numeric digits with cardholder identity verification.
+
+### 5. Multi-Session Web Storage Architecture
+State persistence is partitioned across three distinct `localStorage` keys:
+- `cinepass_pending`: Ephemeral JSON object holding unconfirmed selections during checkout navigation.
+- `cinepass_bookings`: Persistent array containing all confirmed booking ledgers (PNR, movie details, seats, customer identity, payment mode, timestamps).
+- `cinepass_seats`: Global occupancy map recording user-confirmed seat locks across venues. Ticket cancellation frees seats immediately by removing keys from this map.
+
+---
+
+## System Architecture & Data Flow
 
 ```mermaid
 flowchart TD
-    A["🎬 index.html / movies.html<br/>(Film Discovery & Search)"] -->|"Click 'Book' (Passes ?id=movieId)"| B["🎟️ booking.html<br/>(Seat & Schedule Selector)"]
-    B -->|"Saves 'cinepass_pending' to LocalStorage"| C["💳 checkout.html<br/>(Regex Validation & Payment)"]
-    C -->|"Generates PNR & Saves to 'cinepass_bookings'"| D["🎫 ticket.html<br/>(Digital Boarding Pass with Print CSS)"]
-    D -.->|"View / Cancel Anytime"| E["📁 my-bookings.html<br/>(Ticket Management Hub)"]
-    E -->|"Releases Seats in 'cinepass_seats'"| B
+    subgraph Discovery ["1. Discovery & Selection"]
+        A["🎬 index.html<br/>Hero & Featured Showcase"] -->|"Browse"| B["🎞️ movies.html / anime.html<br/>Catalogue with Real-Time Search"]
+    end
+
+    subgraph Reservation ["2. Auditorium Reservation"]
+        B -->|"Click 'Book' (passes ?id=movieId)"| C["🎟️ booking.html<br/>60-Seat Grid & Date/Venue Chips"]
+        C -->|"Stores unconfirmed cart"| D[("💾 localStorage<br/>['cinepass_pending']")]
+    end
+
+    subgraph Checkout ["3. Order & Validation"]
+        D --> E["💳 checkout.html<br/>Regex Validation & Payment Selection"]
+        E -->|"Generates 8-char PNR<br/>e.g., CP4K9X2M"| F[("💾 localStorage<br/>['cinepass_bookings']<br/>['cinepass_seats']")]
+    end
+
+    subgraph Fulfillment ["4. Fulfillment & Management"]
+        F --> G["🎫 ticket.html<br/>Printable Boarding Pass"]
+        G -.->|"View / Cancel"| H["📁 my-bookings.html<br/>Booking Management Hub"]
+        H -->|"Cancel Ticket"| F
+    end
+
+    style Discovery fill:#1B365D,stroke:#2A6496,stroke-width:2px,color:#fff
+    style Reservation fill:#1E293B,stroke:#475569,stroke-width:2px,color:#fff
+    style Checkout fill:#1B365D,stroke:#2A6496,stroke-width:2px,color:#fff
+    style Fulfillment fill:#1E293B,stroke:#475569,stroke-width:2px,color:#fff
 ```
 
 ---
 
-## 🛠 Tech Stack
+## Functional Verification Suite
 
-| Technology | Role in CinePass |
-|---|---|
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="22"/> **HTML5** | Semantic structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`), accessible form controls, and meta tags. |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="22"/> **CSS3** | CSS Custom Properties (variables), CSS Grid (catalogue & seat visualizer), Flexbox, and Media Queries (`900px`, `640px`). |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="22"/> **JavaScript (ES6+)** | Pure client-side logic, DOM manipulation (`createElement`, `textContent`), array operations (`filter`, `map`, `reduce`), and event listeners. |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="22"/> **Web Storage API** | Browser `localStorage` persistence for pending selections (`cinepass_pending`), bookings (`cinepass_bookings`), and seat locks (`cinepass_seats`). |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="22"/> **Visual Studio Code** | Primary development environment with Live Server for local testing and debugging. |
+| Test ID | User Action / Input | Expected System Behavior | Verification Status |
+| :--- | :--- | :--- | :---: |
+| **TC-01** | Open `index.html` in browser | Sticky header, hero banner, statistics counters, and now-showing rows render cleanly. | `PASS` |
+| **TC-02** | Search `dhurandhar` in `movies.html` | Catalogue grid filters instantaneously on keypress to display matching title. | `PASS` |
+| **TC-03** | Apply `Telugu` language chip | Filters catalogue to regional Telugu titles; results counter updates synchronously. | `PASS` |
+| **TC-04** | Select date & time in `booking.html` | Active chips highlight; seat visualizer recalculates deterministic occupancy map. | `PASS` |
+| **TC-05** | Select $> 8$ seats in auditorium | 9th seat selection is intercepted and blocked; error toast feedback triggers. | `PASS` |
+| **TC-06** | Submit checkout with invalid phone/email | Form submission is halted; offending fields highlight red with assistive error labels. | `PASS` |
+| **TC-07** | Complete valid payment transaction | Unique 8-char PNR is minted; user is routed to `ticket.html` with confirmed pass. | `PASS` |
+| **TC-08** | Click `Cancel` in `my-bookings.html` | Booking ledger record is deleted; occupied seats are instantly released back to pool. | `PASS` |
 
 ---
 
-## 📂 Project Directory Structure
+## Project Structure
 
 ```
-Web-dev End Sem Project/
-├── index.html            # Landing page with hero banner, statistics, and now showing showcase
-├── movies.html           # Comprehensive movie catalogue with live search and category chips
-├── anime.html            # Dedicated Japanese anime film collection
+CinePass/
+├── index.html            # Landing portal with hero showcase, statistics, and movie rows
+├── movies.html           # Comprehensive cinema catalogue with live search & genre chips
+├── anime.html            # Dedicated Japanese animation catalogue
 ├── booking.html          # Interactive 60-seat auditorium visualizer and schedule selector
-├── checkout.html         # Validated payment form with regular expression guards
+├── checkout.html         # Validated payment form protected by regular expression guards
 ├── ticket.html           # Digital cinema ticket with verified PNR and print trigger
 ├── my-bookings.html      # Central reservation hub with ticket view and cancellation options
-├── about.html            # Project overview and interactive contact form
+├── about.html            # Project documentation and interactive contact form
 ├── css/
-│   └── style.css         # Unified design system, CSS variables, and responsive layout rules
+│   └── style.css         # Design system tokens, CSS Grid rules, and responsive media queries
 ├── js/
 │   ├── data.js           # Mock movie database, storage helpers, and seeded seat hashing algorithm
 │   ├── site.js           # Header scroll interactions, sticky navigation, and badge counters
-│   ├── home.js           # Dynamic homepage showcase rendering and ticker animation
+│   ├── home.js           # Dynamic homepage showcase rendering and marquee ticker animation
 │   ├── catalogue.js      # Real-time search, category filtering, and sorting engine
 │   ├── booking.js        # Seat selection visualizer, tier pricing, and max seat limits
 │   ├── checkout.js       # Form validation logic, input masking, and PNR generator
@@ -140,9 +175,9 @@ Web-dev End Sem Project/
 
 ---
 
-## ⚡ Quick Start
+## Quickstart & Local Setup
 
-No Node.js, npm, or build tools required. CinePass runs directly in any modern web browser:
+CinePass requires no Node.js runtime, build steps, or dependency installations:
 
 1. **Clone the repository:**
    ```bash
@@ -150,13 +185,13 @@ No Node.js, npm, or build tools required. CinePass runs directly in any modern w
    cd CinePass
    ```
 
-2. **Open in browser:**
-   - Double-click `index.html` to open directly, **OR**
-   - In **VS Code**, right-click `index.html` and select **"Open with Live Server"**.
+2. **Launch the application:**
+   - Double-click `index.html` to open directly in any web browser, **OR**
+   - In **VS Code**, right-click `index.html` and choose **"Open with Live Server"**.
 
 ---
 
-## 👥 Engineering Team
+## Engineering Team
 
 Developed for the **Web Development Course (2026FSWD100)** at the **School of Computer Science Engineering and Technology, Bennett University**:
 
@@ -168,6 +203,6 @@ Developed for the **Web Development Course (2026FSWD100)** at the **School of Co
 
 ---
 
-## 📄 License
+## License
 
-This project is open-source under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
