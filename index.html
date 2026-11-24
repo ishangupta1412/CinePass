@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CinePass | Book Movie Tickets Online</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow"><i></i> Now showing in Delhi NCR</span>
+        <h1>Movie tickets, <em>booked in minutes.</em></h1>
+        <p>Browse this week's releases, pick a theatre and show time, then reserve the exact seats you want. Your ticket is confirmed instantly.</p>
+        <div class="hero-actions">
+          <a href="movies.html" class="btn btn-primary">Browse Movies</a>
+          <a href="anime.html" class="btn btn-ghost">Anime Shows</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <strong id="totalTitles">150</strong>
+            <small>Titles</small>
+          </div>
+          <div>
+            <strong>4</strong>
+            <small>Theatres</small>
+          </div>
+          <div>
+            <strong>5</strong>
+            <small>Shows Daily</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <img id="heroPoster" alt="Featured movie poster" class="hero-poster" />
+        <div class="hero-tag">
+          <span>Today's top pick</span>
+          <strong id="heroPick">The Dark Knight &middot; 9.0</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>Now Showing</h2>
+          <p>Fresh releases and current favourites</p>
+        </div>
+        <a href="movies.html" class="row-link">All titles &rarr;</a>
+      </div>
+      <div class="movie-grid" id="nowShowing"></div>
+    </div>
+  </section>
+
+  <section class="block block-tint">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>Anime on the big screen</h2>
+          <p>Subtitled and dubbed shows across the week</p>
+        </div>
+        <a href="anime.html" class="row-link">Anime catalogue &rarr;</a>
+      </div>
+      <div class="movie-grid" id="animeRow"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <h2>All-time greats</h2>
+          <p>Re-releases worth the big screen ticket</p>
+        </div>
+        <a href="movies.html" class="row-link">Browse all &rarr;</a>
+      </div>
+      <div class="movie-grid" id="classicsRow"></div>
+
+      <div class="cta-band reveal">
+        <div>
+          <h2>Keep every ticket in one place.</h2>
+          <p>Review, print or cancel your bookings whenever you need to.</p>
+        </div>
+        <a href="my-bookings.html" class="btn btn-primary">View My Tickets</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+            Cine<span>Pass</span>
+          </a>
+          <p>An online movie ticket booking platform built for the Web Development mini-project.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="anime.html">Anime Movies</a></li>
+            <li><a href="my-bookings.html">My Bookings</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="about.html#contact">Contact</a></li>
+            <li><a href="about.html">Cancellation Policy</a></li>
+            <li><a href="about.html">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reach Us</h4>
+          <ul>
+            <li><a href="mailto:support@cinepass.in">support@cinepass.in</a></li>
+            <li><a href="tel:+911141234567">+91 11 4123 4567</a></li>
+            <li>Sector 62, Noida</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

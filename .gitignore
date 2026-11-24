@@ -1,0 +1,15 @@
+# Project Reports & Academic Documents (Excluded from GitHub)
+*.pdf
+*.docx
+*.doc
+
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local logs & temp
+*.log
+scratch/

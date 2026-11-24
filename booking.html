@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Seats | CinePass</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="page-head">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span id="crumbTitle">Select Show</span>
+      </div>
+      <h1>Choose Your Show &amp; Seats</h1>
+      <p>Pick a date, theatre and show time, then click on the seats you want.</p>
+    </div>
+
+    <div class="booking-layout">
+      <div>
+        <div class="panel">
+          <div class="movie-summary">
+            <img id="moviePoster" alt="Movie poster" />
+            <div>
+              <h2 id="movieTitle">Movie</h2>
+              <p class="tagline" id="movieTagline"></p>
+              <div class="meta-row" id="movieMeta"></div>
+              <p class="synopsis" id="movieSynopsis"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Select Date</h2>
+            <span>Next 5 days</span>
+          </div>
+          <div class="date-row" id="dateRow"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Select Theatre</h2>
+            <span>Delhi NCR</span>
+          </div>
+          <div class="option-grid" id="theatreGrid"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Select Show Time</h2>
+            <span id="showCaption">Evening shows</span>
+          </div>
+          <div class="option-grid" id="timeGrid"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Select Seats</h2>
+            <span id="seatCounter">0 seats selected</span>
+          </div>
+          <div class="screen-wrap">
+            <div class="screen"></div>
+            <small>Screen This Way</small>
+          </div>
+          <div class="seat-area" id="seatArea"></div>
+          <div class="legend">
+            <div><i></i> Available</div>
+            <div><i class="sel"></i> Selected</div>
+            <div><i class="bkd"></i> Booked</div>
+          </div>
+          <div class="tier-note">
+            <span>Silver (A-B): &#8377;200</span>
+            <span>Gold (C-D): &#8377;280</span>
+            <span>Platinum (E-F): &#8377;350</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="summary-panel">
+        <h3>Booking Summary</h3>
+        <div class="summary-line"><span>Movie</span><strong id="sumMovie">-</strong></div>
+        <div class="summary-line"><span>Date</span><strong id="sumDate">-</strong></div>
+        <div class="summary-line"><span>Theatre</span><strong id="sumTheatre">-</strong></div>
+        <div class="summary-line"><span>Show</span><strong id="sumTime">-</strong></div>
+        <div class="summary-divider"></div>
+        <div class="summary-line"><span>Seats</span><strong id="sumSeatCount">0</strong></div>
+        <div class="seat-tags" id="sumSeatTags"></div>
+        <div class="summary-divider"></div>
+        <div class="summary-total">
+          <span>Total Amount</span>
+          <strong id="sumTotal">&#8377;0</strong>
+        </div>
+        <button class="btn btn-primary btn-block" id="proceedBtn" disabled>Proceed to Pay</button>
+        <p class="hint">Maximum 8 seats per booking</p>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

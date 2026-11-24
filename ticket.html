@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Ticket | CinePass</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Booking Confirmed</h1>
+      <p>Show this ticket at the counter or carry the PNR with you.</p>
+    </div>
+
+    <div class="ticket-stage">
+      <div class="ticket" id="ticket">
+        <div class="ticket-head">
+          <div>
+            <h2 id="ticketMovie">Movie</h2>
+            <small id="ticketMeta">-</small>
+          </div>
+          <span class="status-pill">Confirmed</span>
+        </div>
+        <div class="ticket-body">
+          <div class="ticket-grid">
+            <div>
+              <span>Date</span>
+              <strong id="ticketDate">-</strong>
+            </div>
+            <div>
+              <span>Show Time</span>
+              <strong id="ticketTime">-</strong>
+            </div>
+            <div>
+              <span>Theatre</span>
+              <strong id="ticketTheatre">-</strong>
+            </div>
+            <div>
+              <span>Seats</span>
+              <strong id="ticketSeats">-</strong>
+            </div>
+            <div>
+              <span>Guest Name</span>
+              <strong id="ticketName">-</strong>
+            </div>
+            <div>
+              <span>Amount Paid</span>
+              <strong id="ticketAmount">-</strong>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="barcode"></div>
+          <div class="pnr-line">
+            <span>PNR NUMBER</span>
+            <strong id="ticketPnr">-</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket-actions">
+        <a href="index.html" class="btn btn-ghost">Book Another Show</a>
+        <a href="my-bookings.html" class="btn btn-ghost">My Bookings</a>
+        <button class="btn btn-primary" id="printBtn">Print Ticket</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ticket.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

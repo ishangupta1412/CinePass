@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | CinePass</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="page-head">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>About</span>
+      </div>
+      <h1>About CinePass</h1>
+      <p>A browser-based booking system built with HTML, CSS and JavaScript.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>CinePass is a web based movie ticket booking platform that lets users browse the movies running in nearby theatres, pick a convenient show and reserve their seats in advance. The idea came from the long queues at ticket counters during weekend releases.</p>
+        <p>The entire website runs in the browser using HTML, CSS and JavaScript. Movie details, show timings and seat availability are handled with JavaScript objects, and every confirmed booking is stored in the browser so the ticket can be reopened any time.</p>
+        <ul class="feature-list">
+          <li><span class="check-mark">&#10003;</span><div><b>Browse and filter</b> movies by genre or search by name and language.</div></li>
+          <li><span class="check-mark">&#10003;</span><div><b>Seat selection</b> with live availability, categories and automatic price calculation.</div></li>
+          <li><span class="check-mark">&#10003;</span><div><b>Instant ticket</b> with a unique PNR that can be printed or saved.</div></li>
+          <li><span class="check-mark">&#10003;</span><div><b>My Bookings</b> page to review or cancel a reservation.</div></li>
+        </ul>
+      </div>
+
+      <div class="contact-card" id="contact">
+        <h3>Get in touch</h3>
+        <p>Have a question about a booking? Drop us a message.</p>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="contactName">Your Name</label>
+            <input type="text" id="contactName" placeholder="Enter your name" />
+            <small class="error-msg" id="errContactName"></small>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com" />
+            <small class="error-msg" id="errContactEmail"></small>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" placeholder="Write your message here"></textarea>
+            <small class="error-msg" id="errContactMessage"></small>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <section class="block">
+      <div class="section-head">
+        <div>
+          <h2>Project Team</h2>
+          <p>Four members, four modules</p>
+        </div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar">IG</div>
+          <h3>Ishan Gupta</h3>
+          <p class="role">Module 1 &middot; Catalogue</p>
+          <p>Movie listing page, genre filters, search and card layout.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar">M2</div>
+          <h3>Member Two</h3>
+          <p class="role">Module 2 &middot; Seats</p>
+          <p>Date and show selection, seat map generation and availability logic.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar">M3</div>
+          <h3>Member Three</h3>
+          <p class="role">Module 3 &middot; Payment</p>
+          <p>Checkout form, validation, price summary and PNR generation.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar">M4</div>
+          <h3>Member Four</h3>
+          <p class="role">Module 4 &middot; Records</p>
+          <p>Ticket page, booking history, cancellation and the About page.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta-band">
+      <div>
+                  <h2>Browse what is showing this week.</h2>
+          <p>Four theatres, five shows a day, seats in three price bands.</p>
+      </div>
+      <a href="index.html#movies" class="btn btn-primary">Browse Movies</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand">
+            <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+            Cine<span>Pass</span>
+          </a>
+          <p>An online movie ticket booking platform built for the Web Development mini-project.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="movies.html">All Movies</a></li>
+            <li><a href="anime.html">Anime Movies</a></li>
+            <li><a href="my-bookings.html">My Bookings</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">Cancellation Policy</a></li>
+            <li><a href="about.html">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reach Us</h4>
+          <ul>
+            <li><a href="mailto:support@cinepass.in">support@cinepass.in</a></li>
+            <li><a href="tel:+911141234567">+91 11 4123 4567</a></li>
+            <li>Sector 62, Noida</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

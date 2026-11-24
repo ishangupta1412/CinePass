@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | CinePass</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="page-head">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="booking.html" id="backToSeats">Select Seats</a>
+        <span>/</span>
+        <span>Checkout</span>
+      </div>
+      <h1>Complete Your Payment</h1>
+      <p>Fill in your details to confirm the booking.</p>
+    </div>
+
+    <div class="checkout-grid">
+      <form id="paymentForm" novalidate>
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Contact Details</h2>
+            <span>Ticket will be sent here</span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter your full name" autocomplete="name" />
+              <small class="error-msg" id="errName"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Mobile Number</label>
+              <input type="tel" id="phone" placeholder="10 digit mobile number" maxlength="10" autocomplete="tel" />
+              <small class="error-msg" id="errPhone"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+            <small class="error-msg" id="errEmail"></small>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">
+            <h2>Payment Method</h2>
+            <span>Secure payment</span>
+          </div>
+          <div class="pay-methods">
+            <button type="button" class="pay-option active" data-method="card">Debit / Credit Card</button>
+            <button type="button" class="pay-option" data-method="upi">UPI</button>
+            <button type="button" class="pay-option" data-method="netbanking">Net Banking</button>
+          </div>
+
+          <div class="pay-panel active" id="cardPanel">
+            <div class="field">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" inputmode="numeric" />
+              <small class="error-msg" id="errCard"></small>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="expiry">Expiry (MM/YY)</label>
+                <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" inputmode="numeric" />
+                <small class="error-msg" id="errExpiry"></small>
+              </div>
+              <div class="field">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" placeholder="3 digits" maxlength="3" inputmode="numeric" />
+                <small class="error-msg" id="errCvv"></small>
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-panel" id="upiPanel">
+            <div class="field">
+              <label for="upiId">UPI ID</label>
+              <input type="text" id="upiId" placeholder="yourname@bank" />
+              <small class="error-msg" id="errUpi"></small>
+            </div>
+          </div>
+
+          <div class="pay-panel" id="netbankingPanel">
+            <div class="field">
+              <label for="bankName">Select Bank</label>
+              <input type="text" id="bankName" placeholder="e.g. State Bank of India" />
+              <small class="error-msg" id="errBank"></small>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="confirmBtn">Confirm &amp; Pay</button>
+      </form>
+
+      <aside class="summary-panel sticky-card">
+        <h3>Your Order</h3>
+        <div class="mini-movie">
+          <img id="miniPoster" alt="Movie poster" />
+          <div>
+            <h4 id="miniTitle">Movie</h4>
+            <span id="miniMeta">-</span>
+            <span id="miniShow">-</span>
+          </div>
+        </div>
+        <div class="summary-line"><span>Date</span><strong id="sumDate">-</strong></div>
+        <div class="summary-line"><span>Theatre</span><strong id="sumTheatre">-</strong></div>
+        <div class="seat-tags" id="sumSeats"></div>
+        <div class="summary-divider"></div>
+        <div class="summary-line"><span>Seats (<b id="sumQty">0</b>)</span><strong id="sumSubtotal">&#8377;0</strong></div>
+        <div class="summary-line"><span>Convenience Fee</span><strong id="sumFee">&#8377;0</strong></div>
+        <div class="summary-divider"></div>
+        <div class="summary-total">
+          <span>Total Payable</span>
+          <strong id="sumTotal">&#8377;0</strong>
+        </div>
+        <p class="fee-note">Tickets cannot be exchanged once the show starts. Cancellation is available up to 2 hours before show time.</p>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>

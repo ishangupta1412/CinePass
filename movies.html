@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Movies | CinePass</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="CinePass logo" class="brand-logo" />
+        Cine<span>Pass</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="movies.html" class="active">Movies</a>
+        <a href="anime.html">Anime</a>
+        <a href="my-bookings.html">My Bookings</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="page-head">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>All Movies</span>
+      </div>
+      <h1>All Movies</h1>
+      <p>Hindi, English and regional titles running across our four Delhi NCR screens.</p>
+    </div>
+
+    <div class="filter-bar">
+      <div class="filter-left">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" stroke-linecap="round">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-4-4" />
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search by movie, genre or year" />
+        </div>
+        <div class="select-box">
+          <label for="genreSelect">Genre</label>
+          <select id="genreSelect">
+            <option value="All">All genres</option>
+          </select>
+        </div>
+        <div class="select-box">
+          <label for="sortSelect">Sort by</label>
+          <select id="sortSelect">
+            <option value="rating">Top rated</option>
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="title">Title A-Z</option>
+          </select>
+        </div>
+      </div>
+      <p class="hint" id="resultCount">Loading</p>
+    </div>
+
+    <div class="chips filter-chips" id="filterChips" data-type="language">
+      <button class="chip active" data-value="All">All</button>
+      <button class="chip" data-value="Hindi">Hindi</button>
+      <button class="chip" data-value="English">English</button>
+      <button class="chip" data-value="Telugu">Telugu</button>
+      <button class="chip" data-value="Tamil">Tamil</button>
+      <button class="chip" data-value="Kannada">Kannada</button>
+      <button class="chip" data-value="Malayalam">Malayalam</button>
+      <button class="chip" data-value="Korean">Korean</button>
+    </div>
+
+    <div class="movie-grid" id="movieGrid" data-scope="movies"></div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>&copy; 2026 CinePass. All rights reserved.</span>
+        <span>Made for academic submission</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/posters.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
